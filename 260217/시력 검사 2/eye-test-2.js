@@ -9,7 +9,7 @@ function main() {
   if (t >= 1) {
     console.log("High");
   } else if (t >= 0.5) {
-    console.log("Medium");
+    console.log("Middle");
   } else {
     console.log("Low");
   }
