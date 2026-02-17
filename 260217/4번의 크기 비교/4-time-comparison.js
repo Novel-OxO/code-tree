@@ -3,7 +3,7 @@ function input() {
   let [a, arr] = fs.readFileSync(0).toString().trim().split("\n");
 
   a = Number(a);
-  arr = arr.map(Number);
+  arr = arr.split(" ").map(Number);
 
   return [a, ...arr];
 }
