@@ -2,7 +2,7 @@ function input() {
   const fs = require("fs");
   let arr = fs.readFileSync(0).toString().trim().split(" ").map(Number);
   let first = arr[0];
-  arr.sort();
+  arr.sort((a, b) => a - b);
 
   return [first, arr];
 }
