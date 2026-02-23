@@ -5,6 +5,7 @@ function input() {
 }
 
 function main() {
+  let result = '';
   let n = input();
 
   for (let i = 1; i <= n; i++) {
