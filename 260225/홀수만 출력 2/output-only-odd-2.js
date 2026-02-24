@@ -8,7 +8,7 @@ function main() {
   let [a, b] = input();
   let result = "";
 
-  for (let i = b; i >= a; i-=2) {
+  for (let i = a; i >= b; i-=2) {
     result += i + " ";
   }
 
