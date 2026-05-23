@@ -1,0 +1,29 @@
+const fs = require('fs');
+const path = require('path');
+
+function readInput() {
+    const localPath = path.join(__dirname, 'input.txt');
+    if(fs.existsSync(localPath)) {
+        return fs.readFileSync(localPath, 'utf8');
+    }
+    return fs.readFileSync(0, 'utf8');
+}
+
+
+function solve(raw) {
+    let [n, arr] = raw.trim().split('\n');
+    arr = arr.split(' ').map(Number);
+    let sum = arr.reduce((acc, curr) => acc + curr, 0);
+    let avg = sum / arr.length;
+    console.log(avg.toFixed(1));
+
+    if(avg >= 4) {
+        console.log('Perfect')
+    } else if(avg >= 3) {
+        console.log('Good')
+    } else {
+        console.log('Poor')
+    }
+}
+
+solve(readInput());
